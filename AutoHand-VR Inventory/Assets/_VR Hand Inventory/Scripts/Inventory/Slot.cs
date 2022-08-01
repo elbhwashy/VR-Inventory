@@ -96,7 +96,8 @@ public class Slot : MonoBehaviour
                 // add item to slot
                 other.gameObject.SetActive(false); 
                 other.transform.position = transform.position; 
-                other.transform.rotation = transform.rotation; 
+                other.transform.rotation = transform.rotation;
+                other.GetComponent<Rigidbody>().isKinematic = true;
 
                 //update UI
                 UpdateSlotUI();
