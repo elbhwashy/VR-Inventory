@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_PortalShader
+  m_Name: Shader Graphs_PortalShader Blue
   m_Shader: {fileID: -6465566751694194690, guid: 6708ab78bdb9e0441bcc6f9a24221a40,
     type: 3}
   m_ShaderKeywords: 
@@ -40,6 +40,6 @@ Material:
     - Vector1_acd47de9b7b4479b9bed039bdf096834: 50
     - Vector1_eacd0658619443fb9e0b501b419fcf56: 0.09
     m_Colors:
-    - Color_2c40f76276b4454d8deaae424f1dacf4: {r: 3.2198787, g: 11.181761, b: 0, a: 0}
+    - Color_2c40f76276b4454d8deaae424f1dacf4: {r: 0, g: 1.2520959, b: 11.181761, a: 0}
     - Vector2_af2740e5cc244a8391149ac258a2a72d: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
