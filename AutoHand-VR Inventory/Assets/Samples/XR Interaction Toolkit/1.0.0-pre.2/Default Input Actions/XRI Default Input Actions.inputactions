@@ -839,7 +839,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ToggleSlots",
+                    "name": "ToggleWRaistInventory",
                     "type": "Button",
                     "id": "5d0a65fb-3095-45e9-aa71-eaf855a60d66",
                     "expectedControlType": "Button",
@@ -851,6 +851,15 @@
                     "name": "ToggleMainMenu",
                     "type": "Button",
                     "id": "d47c6081-c5ed-454b-83c4-6fd3f69afaad",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleWRist",
+                    "type": "Button",
+                    "id": "484ba4fc-1c44-4308-bb69-92694e06cb93",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -887,7 +896,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
-                    "action": "ToggleSlots",
+                    "action": "ToggleWRaistInventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -899,6 +908,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "ToggleMainMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1eb3140f-feae-453b-9db2-20d0c7429e4e",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleWRist",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

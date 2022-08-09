@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -102,6 +103,11 @@ public class MainMenuManager : MonoBehaviour
     public void ClosePanel(GameObject panel)
     {
         panel.SetActive(false);
+    }
+
+    public void GotoMainScene()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void CloseApp()
