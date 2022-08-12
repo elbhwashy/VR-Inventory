@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ItemUICell : MonoBehaviour
 {
+    public WRistListManager WRistListManager;
+
     public Image ItemImage;
     public TMPro.TextMeshProUGUI ItemName;
     public TMPro.TextMeshProUGUI ItemCount;
@@ -14,5 +16,11 @@ public class ItemUICell : MonoBehaviour
     {
         ItemImage.sprite = itemSprite;
         ItemName.text = itemName; 
+    }
+
+
+    public void OnClickItem()
+    {
+        WRistListManager.OnDragItemFromMenu(this);
     }
 }

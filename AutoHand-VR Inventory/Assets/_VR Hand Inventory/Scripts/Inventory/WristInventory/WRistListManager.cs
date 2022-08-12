@@ -8,6 +8,8 @@ public class WRistListManager : MonoBehaviour
     public ItemUICell itemUIPrefab;
     public List<WRistSlot> wRistSlots = new List<WRistSlot>();
 
+    public Transform rightHand;
+
     private void Start()
     {
         itemUIPrefab.gameObject.SetActive(false);
@@ -45,12 +47,36 @@ public class WRistListManager : MonoBehaviour
             WRistSlot newWRistSlot = new WRistSlot();
             newWRistSlot.AddItem(item.itemProperties.itemName, item, newItem);
 
+            newWRistSlot.UIItem.ItemCount.text = newWRistSlot.items.Count + "";
+
             wRistSlots.Add(newWRistSlot);
 
             item.gameObject.SetActive(false);
 
             if (hint.activeInHierarchy) hint.SetActive(false);
+        }
+    }
 
+
+    public void OnDragItemFromMenu(ItemUICell item)
+    {
+        for (int i = 0; i < wRistSlots.Count; i++)
+        {
+            if(wRistSlots[i].SlotName == item.ItemName.text)
+            {
+                wRistSlots[i].items[0].transform.position = rightHand.position;
+                wRistSlots[i].items[0].gameObject.SetActive(true);
+
+                wRistSlots[i].items.Remove(wRistSlots[i].items[0]);
+
+                wRistSlots[i].UIItem.ItemCount.text = wRistSlots[i].items.Count +"";
+
+                if(wRistSlots[i].items.Count ==0)
+                {
+                    wRistSlots.Remove(wRistSlots[i]);
+                    Destroy(item.gameObject);
+                }
+            }
         }
     }
 }

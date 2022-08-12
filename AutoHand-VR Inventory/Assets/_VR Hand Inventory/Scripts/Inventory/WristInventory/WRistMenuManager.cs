@@ -10,9 +10,13 @@ public class WRistMenuManager : MonoBehaviour
     public InputActionReference SecondaryButtonRefrenece = null;
 
     public GameObject wRistMenu;
-    public GameObject inventoryPanel, itemsPanel;
+    public GameObject introPanel, itemsPanel;
 
 
+    private void Awake()
+    {
+        wRistMenu.SetActive(false);
+    }
     private void OnEnable()
     {
         // set up input refrenece
@@ -22,6 +26,12 @@ public class WRistMenuManager : MonoBehaviour
     private void OnDisable()
     {
         SecondaryButtonRefrenece.action.started -= ToggleWRistMenu; 
+    }
+
+    private void Start()
+    {
+        itemsPanel.SetActive(false);
+        introPanel.SetActive(true);
     }
 
     private void ToggleWRistMenu(InputAction.CallbackContext obj)
@@ -35,21 +45,15 @@ public class WRistMenuManager : MonoBehaviour
             wRistMenu.SetActive(true);
         }
     }
-
-    private void Awake()
-    {
-        wRistMenu.SetActive(false);
-    }
-
     public void OpenItemsPanel()
     {
-        inventoryPanel.SetActive(false);
+        introPanel.SetActive(false);
         itemsPanel.SetActive(true);
     }
 
     public void BackToInventory()
     {
-        inventoryPanel.SetActive(true);
+        introPanel.SetActive(true);
         itemsPanel.SetActive(false);
     }
 

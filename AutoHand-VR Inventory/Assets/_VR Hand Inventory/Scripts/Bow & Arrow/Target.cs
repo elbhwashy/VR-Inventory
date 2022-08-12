@@ -25,7 +25,7 @@ public class Target : MonoBehaviour
         Arrow arrow = collision.gameObject.GetComponent<Arrow>();
         if (arrow != null)
         {
-            if (targetType == arrow.arrowType)
+            //if (targetType == arrow.arrowType)
             {
                 OnArrowEnterTarget(arrow);
                 SetHealth(arrow);
@@ -43,7 +43,17 @@ public class Target : MonoBehaviour
         arrow.col.isTrigger = true;
         arrow.rb.isKinematic = true;
 
+        StartCoroutine(SetArrowDeActive(arrow));
+
         Destroy(arrow.grabbable);
+    }
+
+
+    IEnumerator SetArrowDeActive(Arrow arrow)
+    {
+        arrow.gameObject.SetActive(false);
+        yield return new WaitForSeconds(1f);
+       
     }
 
     private void SetHealth(Arrow arrow)
