@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,21 +21,11 @@ namespace BNG {
 
         public Projectile ProjectileObject;
 
-        private Transform arrowInitialParent;
-        private Vector3 arrowInitialPos;
-        private Quaternion arrowInitialRot;
-
         // Get this value from the ProjectileObject
         float arrowDamage;
-        bool isShooted = false;
-        float shootedTime = 0.0f;
+
         // Start is called before the first frame update
         void Start() {
-
-            arrowInitialPos = this.transform.localPosition;
-            arrowInitialRot = this.transform.localRotation;
-            arrowInitialParent = transform.parent;
-
             rb = GetComponent<Rigidbody>();
             impactSound = GetComponent<AudioSource>();
             ShaftCollider = GetComponent<Collider>();
@@ -64,17 +53,7 @@ namespace BNG {
             ZVel = transform.InverseTransformDirection(rb.velocity).z;
 
             if (Flying) {
-                flightTime += Time.fixedDeltaTime;                
-            }
-
-            if (isShooted)
-            {
-                shootedTime += Time.fixedDeltaTime;
-
-                if(shootedTime >= 3.0f)
-                {
-                    ResetArrow();
-                }
+                flightTime += Time.fixedDeltaTime;
             }
 
             // Cancel Destroy if we just picked this up
@@ -83,18 +62,7 @@ namespace BNG {
             }
         }
 
-        private void ResetArrow()
-        {
-            isShooted = false;
-            transform.parent = arrowInitialParent;
-            transform.localPosition = arrowInitialPos;
-            transform.localRotation = arrowInitialRot;
-        }
-
         public void ShootArrow(Vector3 shotForce) {
-
-            isShooted = true;
-            shootedTime = 0;
 
             flightTime = 0f;
             Flying = true;

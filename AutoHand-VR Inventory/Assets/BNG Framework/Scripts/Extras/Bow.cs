@@ -152,7 +152,7 @@ namespace BNG {
             }
 
             // Move arrow knock, align the arrow
-            if (holdingArrow && GrabbedArrow.name == ArrowPrefabName) {
+            if (holdingArrow) {
                 setKnockPosition();
                 alignArrow();
                 checkDrawSound();

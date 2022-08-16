@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: AutoHand-VR Inventory
+  companyName: VR
+  productName: Inventory
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -201,6 +201,13 @@ PlayerSettings:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 1888656155990357024, guid: c3626f2532af8ab44a4455d950d965cc, type: 2}
   - {fileID: -5208040564477846725, guid: 99747ee47a230ce4aa0f77d931419ac7, type: 2}
   - {fileID: 11400000, guid: c2f73ad5a4e6b094288bb38cac9e142f, type: 2}
@@ -222,7 +229,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.DefaultCompany.AutoHandVRInventory
+    Android: com.VR.Inventory
   buildNumber:
     Standalone: 0
     iPhone: 0

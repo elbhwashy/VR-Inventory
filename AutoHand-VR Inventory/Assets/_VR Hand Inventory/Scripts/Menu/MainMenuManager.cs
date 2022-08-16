@@ -24,7 +24,7 @@ public class MainMenuManager : MonoBehaviour
     private void Awake()
     {
         mainMenu.SetActive(false);
-    }
+    } 
 
     private void OnEnable()
     {
