@@ -8,15 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_VR Hand Inventory/Scenes/MainScene.unity
     guid: 7a430a37645f4144d8607267ea85a274
-  - enabled: 1
-    path: Assets/_VR Hand Inventory/Scenes/TriggerScene East.unity
-    guid: d331ef5163994694c9a66c2f8948a1f3
+  - enabled: 0
+    path: Assets/_VR Hand Inventory/Scenes/Draft/TestVRIF 2.unity
+    guid: f50f8421ce1442f46aa00309c5d0ff6c
   - enabled: 1
     path: Assets/_VR Hand Inventory/Scenes/TriggerScene North.unity
-    guid: d2a12ec7665ed9540bd1128369345fe9
+    guid: ea9fe6e74c0d8a64d99caa1045ee822a
+  - enabled: 1
+    path: Assets/_VR Hand Inventory/Scenes/TriggerScene East.unity
+    guid: 007b4438db43dfa4097bbe74d145c966
   - enabled: 1
     path: Assets/_VR Hand Inventory/Scenes/TriggerScene South.unity
-    guid: 6f4ebd44518de40409f8fadf1c38fde7
+    guid: 8597f4667689b9640b9a8314a0218f98
   - enabled: 1
     path: Assets/_VR Hand Inventory/Scenes/TriggerScene West.unity
     guid: be607aace8acced48bb5279d2c874229
