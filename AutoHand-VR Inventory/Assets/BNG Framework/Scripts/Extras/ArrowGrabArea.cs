@@ -32,7 +32,10 @@ namespace BNG {
                 else if(grabObject.HoldingItem && grabObject.HeldGrabbable != null) {
                     // A held Arrow entered the grab area but has not yet been knocked
                     Arrow arrowObject = grabObject.HeldGrabbable.GetComponent<Arrow>();
-                    if (arrowObject != null && theBow.GrabbedArrow == null && theBow.ArrowPrefabName == arrowObject.name) {
+
+                    if (arrowObject != null && theBow.GrabbedArrow == null && theBow.ArrowPrefabName == arrowObject.name)
+                    {
+                        //if (arrowObject != null && theBow.GrabbedArrow == null && theBow.ArrowPrefabName == arrowObject.name) {
                         theBow.GrabArrow(arrowObject);
                     }
                 }
