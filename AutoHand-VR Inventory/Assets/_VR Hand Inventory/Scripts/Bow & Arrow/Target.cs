@@ -22,43 +22,27 @@ public class Target : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Arrow arrow = collision.gameObject.GetComponent<Arrow>();
+        BNG.Arrow arrow = collision.gameObject.GetComponent<BNG.Arrow>();
         if (arrow != null)
         {
             //if (targetType == arrow.arrowType)
             {
-                OnArrowEnterTarget(arrow);
                 SetHealth(arrow);
             }
         }
     }
 
-    private void OnArrowEnterTarget(Arrow arrow)
-    {
-        arrow.arrowStatus = _ArrowStatus.Hit;
 
-        arrow.transform.parent = transform;
-        arrow.rb.velocity = Vector3.zero;
-        arrow.rb.angularVelocity = Vector3.zero;
-        arrow.col.isTrigger = true;
-        arrow.rb.isKinematic = true;
-
-        StartCoroutine(SetArrowDeActive(arrow));
-
-        Destroy(arrow.grabbable);
-    }
-
-
-    IEnumerator SetArrowDeActive(Arrow arrow)
+    IEnumerator SetArrowDeActive(BNG.Arrow arrow)
     {
         arrow.gameObject.SetActive(false);
         yield return new WaitForSeconds(1f);
        
     }
 
-    private void SetHealth(Arrow arrow)
+    private void SetHealth(BNG.Arrow arrow)
     {
-        health -= arrow.arrowDamage;
+        health -= arrow.ProjectileObject.Damage;
 
         healthBar.fillAmount = health / maxHealth;
     }

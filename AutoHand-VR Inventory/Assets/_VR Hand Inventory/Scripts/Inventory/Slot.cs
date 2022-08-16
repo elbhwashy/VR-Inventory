@@ -78,7 +78,8 @@ public class Slot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name + " sddf ");
+        Debug.Log(other.name + "  sddf  " + other.transform.parent.name);
+        Debug.Log(other.tag + "  tttt  " );
         if (!isControllerIn)
         {
             Item item = other.GetComponent<Item>();

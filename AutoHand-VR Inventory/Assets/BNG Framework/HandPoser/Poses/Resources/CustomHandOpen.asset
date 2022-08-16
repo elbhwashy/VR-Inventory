@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d095236d72305f645a71d717903e9d8f, type: 3}
+  m_Name: CustomHandOpen
+  m_EditorClassIdentifier: 
+  PoseName: Default
+  Joints:
+    WristJoint:
+      TransformName: joint1
+      LocalPosition: {x: 0, y: 0, z: 0}
+      LocalRotation: {x: 0.5564037, y: -0.018750966, z: 0.76964945, w: 0.31257492}
+    ThumbJoints:
+    - TransformName: Thumb
+      LocalPosition: {x: -0.05800174, y: 0, z: 0.02175807}
+      LocalRotation: {x: -0.029389514, y: 0.18134141, z: 0.15725726, w: 0.9703204}
+    - TransformName: joint4
+      LocalPosition: {x: -0.050974086, y: -0.0005388551, z: -4.4408918e-17}
+      LocalRotation: {x: -2.0553254e-29, y: 6.6990396e-30, z: 0.019428862, w: 0.99981123}
+    - TransformName: joint5
+      LocalPosition: {x: -0.02812441, y: 0.0007548977, z: 0.0038330508}
+      LocalRotation: {x: 0, y: 0, z: 0.19372624, w: 0.9810556}
+    IndexJoints:
+    - TransformName: Index
+      LocalPosition: {x: -0.08508873, y: -0.04803724, z: -0.00677581}
+      LocalRotation: {x: 0.005628396, y: -0.01364664, z: 0.38124055, w: 0.92435807}
+    - TransformName: joint7 3
+      LocalPosition: {x: -0.02960591, y: -5.3290707e-17, z: 0.001127368}
+      LocalRotation: {x: -2.5653225e-30, y: 1.2575257e-28, z: 0.020395426, w: 0.999792}
+    - TransformName: joint8 3
+      LocalPosition: {x: -0.03072617, y: -5.3290707e-17, z: 0.0004403765}
+      LocalRotation: {x: -3.3580117e-31, y: 3.5998134e-29, z: 0.009327661, w: 0.9999565}
+    - TransformName: joint9 3
+      LocalPosition: {x: -0.02176664, y: 1.7763568e-17, z: 0.0006719812}
+      LocalRotation: {x: 0, y: 0, z: -0.0195553, w: 0.9998088}
+    MiddleJoints:
+    - TransformName: Middle
+      LocalPosition: {x: -0.06869919, y: -0.06452649, z: -0.01331274}
+      LocalRotation: {x: 0.005327805, y: -0.012573482, z: 0.39011636, w: 0.92066437}
+    - TransformName: joint7
+      LocalPosition: {x: -0.039173618, y: -0.001367179, z: 0.001127368}
+      LocalRotation: {x: -6.296835e-31, y: 1.2005485e-28, z: 0.03747214, w: 0.9992977}
+    - TransformName: joint8
+      LocalPosition: {x: -0.028319558, y: 0.00004490197, z: 0.0004403765}
+      LocalRotation: {x: -3.3761604e-31, y: 3.6194016e-29, z: 0.009327661, w: 0.9999565}
+    - TransformName: joint9
+      LocalPosition: {x: -0.02176664, y: -5.3290704e-17, z: 0.0006719812}
+      LocalRotation: {x: 0, y: 0, z: -0.0195553, w: 0.9998088}
+    RingJoints:
+    - TransformName: Ring
+      LocalPosition: {x: -0.05092897, y: -0.07827813, z: -0.008835976}
+      LocalRotation: {x: 0.006584828, y: -0.0155400215, z: 0.39009714, w: 0.9206191}
+    - TransformName: joint7 1
+      LocalPosition: {x: -0.029523721, y: -0.00072844175, z: 0.001127368}
+      LocalRotation: {x: -1.109269e-30, y: 1.1792441e-28, z: 0.009406234, w: 0.9999558}
+    - TransformName: joint8 1
+      LocalPosition: {x: -0.023520738, y: 0.0001344371, z: 0.0004403765}
+      LocalRotation: {x: 8.292582e-31, y: 6.2053354e-29, z: -0.01336244, w: 0.9999107}
+    - TransformName: joint9 1
+      LocalPosition: {x: -0.02176664, y: -6.217249e-17, z: 0.0006719812}
+      LocalRotation: {x: 0, y: 0, z: -0.0195553, w: 0.9998088}
+    PinkyJoints:
+    - TransformName: Pinky
+      LocalPosition: {x: -0.02927561, y: -0.086094394, z: -0.0051210895}
+      LocalRotation: {x: -0.002025445, y: 0.004876085, z: 0.38360003, w: 0.92348427}
+    - TransformName: joint7 2
+      LocalPosition: {x: -0.021311741, y: -0.00057393376, z: 0.001127368}
+      LocalRotation: {x: -9.620728e-31, y: 1.0227579e-28, z: 0.009406234, w: 0.9999558}
+    - TransformName: joint8 2
+      LocalPosition: {x: -0.0174748, y: -0.000027183129, z: 0.0004403765}
+      LocalRotation: {x: 8.134602e-31, y: 6.087102e-29, z: -0.013362439, w: 0.9999107}
+    - TransformName: joint9 2
+      LocalPosition: {x: -0.017976033, y: -0.00014833813, z: 0.0006719812}
+      LocalRotation: {x: 0, y: 0, z: -0.0195553, w: 0.9998088}
+    OtherJoints: []

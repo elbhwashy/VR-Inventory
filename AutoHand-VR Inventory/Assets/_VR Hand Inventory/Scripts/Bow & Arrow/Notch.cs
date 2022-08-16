@@ -16,7 +16,7 @@ public class Notch : MonoBehaviour
 
     [Header("Hands")]
     public Bow bow;
-    public String _String;
+    public _String _String;
 
     [Header("Limits")]
     public Transform minLimit;    

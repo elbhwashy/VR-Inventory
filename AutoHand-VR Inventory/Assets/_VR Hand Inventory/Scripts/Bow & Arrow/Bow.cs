@@ -1,4 +1,4 @@
-using Autohand;
+using BNG;
 using UnityEngine;
 
 public class Bow : MonoBehaviour
@@ -17,10 +17,15 @@ public class Bow : MonoBehaviour
     public Transform arrowPos;
 
 
+    Rigidbody rb;
+    Collider col;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        col = GetComponent<Collider>();
+
         bowGrabStatus = _BowGrabStatus.Idle;
         bowStatus = _BowStatus.Empty;
         notch.SetNotchActivate(false);
@@ -29,11 +34,13 @@ public class Bow : MonoBehaviour
 
     public void OnGrabBow()
     {
+        rb.isKinematic = false;
         bowGrabStatus = _BowGrabStatus.Grabbed;
     }
 
     public void OnRelaseBow()
     {
+        rb.isKinematic = true;
         bowGrabStatus = _BowGrabStatus.Idle;
     }
 
@@ -45,7 +52,10 @@ public class Bow : MonoBehaviour
                 //if (arrow.arrowType == bowType )
             if (arrow.arrowType == bowType && arrow.arrowStatus == _ArrowStatus.Grabbed && bowGrabStatus == _BowGrabStatus.Grabbed)
             {
-                arrow.GetComponent<Grabbable>().HandsRelease();
+                //arrow.GetComponent<Grabbable>().Release(Vector3.zero, Vector3.zero);
+                Grabber grabber = arrow.GetComponent<Grabbable>().GetPrimaryGrabber();
+                grabber.ForceRelease = true;
+
                 arrow.GetComponent<Grabbable>().enabled = false;                
 
                 arrow.rb.isKinematic = true;

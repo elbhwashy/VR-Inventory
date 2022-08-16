@@ -1,4 +1,5 @@
 using Autohand;
+using BNG;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ public class MainMenuManager : MonoBehaviour
     
     [Header("Player")]
     public Transform playerPosition;
-    public AutoHandPlayer autoHandPlayer;
+    public SmoothLocomotion smoothLocomotion;
 
     [Space]
     public GameObject LoadingSphere;
@@ -71,14 +72,14 @@ public class MainMenuManager : MonoBehaviour
     {
         mainMenu.transform.position = playerPosition.transform.position;
         mainMenu.SetActive(true);
-        autoHandPlayer.useMovement = false;
+        smoothLocomotion.enabled = false;
 
     }
 
     public void ResumeGame()
     {
         mainMenu.SetActive(false);
-        autoHandPlayer.useMovement = true;
+        smoothLocomotion.enabled = true;
 
     }
 
@@ -90,7 +91,7 @@ public class MainMenuManager : MonoBehaviour
 
     void PlayerToStartPos()
     {
-        autoHandPlayer.SetPosition(Vector3.zero);
+        smoothLocomotion.transform.localPosition = (Vector3.zero);
         LoadingSphere.SetActive(false);
         ResumeGame();
     }

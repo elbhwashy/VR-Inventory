@@ -1,4 +1,5 @@
 using Autohand;
+using BNG;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class AnchorAreaManager : MonoBehaviour
 {
-    public AutoHandPlayer autoHandPlayer;
+    public BNG.BNGPlayerController playerController;
 
     public GameObject anchor;
     public GameObject portal;
@@ -26,7 +27,8 @@ public class AnchorAreaManager : MonoBehaviour
             // Activate the portal & then move to the next scene
             anchor.SetActive(false);
             portal.gameObject.SetActive(true);
-            autoHandPlayer.enabled = false;
+            playerController.GetComponent<SmoothLocomotion>().enabled = false;
+            playerController.GetComponent<PlayerRotation>().enabled = false;
 
 
             Invoke("MoveToTriggerScene", loadingTime);
