@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89293b6fdc47ba548bc2c5f7e4920212, type: 3}
+  m_Name: ObjectPoolPrefabList
+  m_EditorClassIdentifier: 
+  poolPrefabs:
+  - prefab: {fileID: 1961964258596952, guid: eca1ff6741def5a468081e17839fc91e, type: 3}
+    frequency: 4
+  - prefab: {fileID: 1232470965182556, guid: 51bd01b23e91fda4bad128a9d11ac143, type: 3}
+    frequency: 5
+  - prefab: {fileID: 1707102027251842, guid: 18776a98654da834ca6d32c0064b3709, type: 3}
+    frequency: 3
+  - prefab: {fileID: 1310787322710076, guid: 245d49897a4be584abef87db769d4d7c, type: 3}
+    frequency: 3
+  - prefab: {fileID: 1374267004960804, guid: 10a196906512b5141bfd56285ee6c562, type: 3}
+    frequency: 3
+  - prefab: {fileID: 1340992293834908, guid: a489afa43ee836647b6b99a9c38b6f13, type: 3}
+    frequency: 3
+  - prefab: {fileID: 1170744857039610, guid: 1fcfcb93d7455e94bb4991c5ab289a41, type: 3}
+    frequency: 3
+  - prefab: {fileID: 1752905781611240, guid: a150ddd267ffc1b428ae91d94b828b02, type: 3}
+    frequency: 3
+  - prefab: {fileID: 8492691355680688421, guid: aace8a0e1b73fb74998f21f0355687c7, type: 3}
+    frequency: 2
+  - prefab: {fileID: 2443062272916958025, guid: 63ae0c3b13ccb5b4db0f5fd975ee6229, type: 3}
+    frequency: 2
+  - prefab: {fileID: 4835800033331902287, guid: 2de1b4d6046906443a3c732608cabffd, type: 3}
+    frequency: 2
+  - prefab: {fileID: 4914421639249870581, guid: 740ac24342a51964f9ad1e4a000b067d, type: 3}
+    frequency: 2
