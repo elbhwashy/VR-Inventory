@@ -8,7 +8,6 @@ public class InventoryManager : MonoBehaviour
 {
     [Header("toggle Controller References")]
     public InputActionReference PrimaryButtonController_Refrenece = null;
-    public Transform playerPosition;
 
 
     public GameObject slotsParent;
@@ -29,10 +28,7 @@ public class InventoryManager : MonoBehaviour
         PrimaryButtonController_Refrenece.action.started -= ToggleInventory; 
     }
 
-    private void Update()
-    {
-        this.transform.localPosition = playerPosition.localPosition;
-    }
+    
 
     private void ToggleInventory(InputAction.CallbackContext obj)
     {
