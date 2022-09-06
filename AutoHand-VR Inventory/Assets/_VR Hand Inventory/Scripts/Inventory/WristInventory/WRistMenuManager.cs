@@ -9,6 +9,8 @@ public class WRistMenuManager : MonoBehaviour
     [Header("Controller Reference")]
     public InputActionReference SecondaryButtonRefrenece = null;
 
+    public WRistListManager WRistListManager;
+
     public GameObject wRistMenu;
     public GameObject introPanel, itemsPanel;
 
@@ -16,11 +18,13 @@ public class WRistMenuManager : MonoBehaviour
     private void Awake()
     {
         wRistMenu.SetActive(false);
+        itemsPanel.SetActive(false);
+        introPanel.SetActive(true);
     }
     private void OnEnable()
     {
         // set up input refrenece
-        SecondaryButtonRefrenece.action.started += ToggleWRistMenu; 
+        SecondaryButtonRefrenece.action.started += ToggleWRistMenu;
     }
 
     private void OnDisable()
@@ -30,20 +34,35 @@ public class WRistMenuManager : MonoBehaviour
 
     private void Start()
     {
-        itemsPanel.SetActive(false);
-        introPanel.SetActive(true);
+        WRistListManager.setUpMenu();
     }
 
-    private void ToggleWRistMenu(InputAction.CallbackContext obj)
+    public void ToggleWRistMenu(InputAction.CallbackContext obj)
     {
         if (wRistMenu.activeInHierarchy)
         {
             wRistMenu.SetActive(false);
+            //WRistListManager.SaveData();
         }
         else
         {
-            wRistMenu.SetActive(true);
+            wRistMenu.SetActive(true); 
         }
+
+    }
+    
+    public void ToggleWRistMenu()
+    {
+        if (wRistMenu.activeInHierarchy)
+        {
+            wRistMenu.SetActive(false);
+            WRistListManager.SaveData();
+        }
+        else
+        {
+            wRistMenu.SetActive(true); 
+        }
+
     }
     public void OpenItemsPanel()
     {

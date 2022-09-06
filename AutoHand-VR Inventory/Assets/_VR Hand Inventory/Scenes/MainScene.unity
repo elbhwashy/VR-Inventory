@@ -707,7 +707,7 @@ MonoBehaviour:
   playerController: {fileID: 5782634464536494203}
   anchor: {fileID: 159044082}
   portal: {fileID: 1509220486}
-  nextSceneName: TriggerScene West
+  nextSceneName: TriggerSceneWest
   loadingTime: 5
 --- !u!65 &135222371
 BoxCollider:
@@ -1724,7 +1724,7 @@ MonoBehaviour:
   playerController: {fileID: 5782634464536494203}
   anchor: {fileID: 1154613588}
   portal: {fileID: 496852275}
-  nextSceneName: TriggerScene South
+  nextSceneName: TriggerSceneSouth
   loadingTime: 5
 --- !u!65 &997197378
 BoxCollider:
@@ -2793,7 +2793,7 @@ MonoBehaviour:
   playerController: {fileID: 5782634464536494203}
   anchor: {fileID: 111034128}
   portal: {fileID: 1901442135}
-  nextSceneName: TriggerScene East
+  nextSceneName: TriggerSceneEast
   loadingTime: 5
 --- !u!65 &1881496429
 BoxCollider:
@@ -48675,7 +48675,7 @@ MonoBehaviour:
   playerController: {fileID: 5782634464536494203}
   anchor: {fileID: 7457356453857379691}
   portal: {fileID: 1121232094}
-  nextSceneName: TriggerScene North
+  nextSceneName: TriggerSceneNorth
   loadingTime: 5
 --- !u!65 &4726581502007292358
 BoxCollider:

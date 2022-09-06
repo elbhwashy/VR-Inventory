@@ -8,7 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FireAura
-  m_Shader: {fileID: -6465566751694194690, guid: 9fbb4308250113141890d15bedc8cbdf, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 9fbb4308250113141890d15bedc8cbdf,
+    type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -40,6 +41,7 @@ Material:
     - Vector1_f353be2353624123a59eb125bcc0b7a1: 15
     - _GlowIntensity: 0
     m_Colors:
-    - Color_7e80938b170140c9ab098c70aa574bad: {r: 95.87451, g: 48.690197, b: 18.57255, a: 0}
+    - Color_7e80938b170140c9ab098c70aa574bad: {r: 95.87451, g: 48.690197, b: 18.57255,
+        a: 0}
     - Vector2_0e5225a23ec940279b8f7e7670c7f87f: {r: 0, g: -0.2, b: 0, a: 0}
   m_BuildTextureStacks: []

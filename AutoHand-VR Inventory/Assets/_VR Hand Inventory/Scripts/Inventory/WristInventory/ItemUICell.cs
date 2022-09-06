@@ -15,7 +15,8 @@ public class ItemUICell : MonoBehaviour
     public void SetItemProp(Sprite itemSprite, string itemName, string itemCount)
     {
         ItemImage.sprite = itemSprite;
-        ItemName.text = itemName; 
+        ItemName.text = itemName;
+        ItemCount.text = itemCount;
     }
 
 
