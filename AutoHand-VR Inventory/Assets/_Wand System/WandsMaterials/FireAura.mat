@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10,7 +10,8 @@ Material:
   m_Name: FireAura
   m_Shader: {fileID: -6465566751694194690, guid: 9fbb4308250113141890d15bedc8cbdf,
     type: 3}
-  m_ShaderKeywords: 
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -32,6 +33,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Vector1_39b8d877b2e240d8a8ddfe43d5a1eff1: 0.7
     - Vector1_69205ab1d10b4c2fadfac7f9d09e0944: -0.17
@@ -40,8 +42,23 @@ Material:
     - Vector1_919a8238552d46ef81ec97dc1ff375a4: 1
     - Vector1_f353be2353624123a59eb125bcc0b7a1: 15
     - _GlowIntensity: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color_7e80938b170140c9ab098c70aa574bad: {r: 95.87451, g: 48.690197, b: 18.57255,
         a: 0}
     - Vector2_0e5225a23ec940279b8f7e7670c7f87f: {r: 0, g: -0.2, b: 0, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &636577770060013131
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

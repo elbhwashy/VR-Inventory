@@ -10,13 +10,13 @@ EditorBuildSettings:
     guid: 7a430a37645f4144d8607267ea85a274
   - enabled: 1
     path: Assets/_VR Hand Inventory/Scenes/TriggerSceneEast.unity
-    guid: 9b3761cce55b0ff4ebe5f3fe7da00a16
+    guid: 7cf4b63e0199cbb4e89434246252d2ce
   - enabled: 1
     path: Assets/_VR Hand Inventory/Scenes/TriggerSceneNorth.unity
-    guid: 558e694b533db1747b14d79f5a759ceb
+    guid: 13035a512e945dd48991cc3faa4fe1b7
   - enabled: 1
     path: Assets/_VR Hand Inventory/Scenes/TriggerSceneSouth.unity
-    guid: 5844e05106372ea40a865a04e88a9eb4
+    guid: 2f3a1356b10582f488c4a9d9a335735f
   - enabled: 1
     path: Assets/_VR Hand Inventory/Scenes/TriggerSceneWest.unity
     guid: be607aace8acced48bb5279d2c874229

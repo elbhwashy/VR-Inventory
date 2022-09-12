@@ -11,8 +11,9 @@ public class WRistMenuManager : MonoBehaviour
 
     public WRistListManager WRistListManager;
 
+    [Header("Panels")]
     public GameObject wRistMenu;
-    public GameObject introPanel, itemsPanel;
+    public GameObject introPanel, itemsPanel, infoPanel, confortPanel;
 
 
     private void Awake()
@@ -64,17 +65,17 @@ public class WRistMenuManager : MonoBehaviour
         }
 
     }
-    public void OpenItemsPanel()
+    public void OpenPanel(GameObject panel)
     {
         introPanel.SetActive(false);
-        itemsPanel.SetActive(true);
+        panel.SetActive(true);
     }
-
-    public void BackToInventory()
+    
+    public void ClosePanel(GameObject panel)
     {
         introPanel.SetActive(true);
-        itemsPanel.SetActive(false);
-    }
+        panel.SetActive(false);
+    } 
 
     public void CloseWRistMenu()
     {

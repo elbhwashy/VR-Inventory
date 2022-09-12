@@ -1,27 +1,24 @@
 using Autohand;
+using BNG;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MovementManager : MonoBehaviour
 {
-    [SerializeField] private AutoHandPlayer autoHandPlayer; 
-    [SerializeField] private Teleporter playerTeleport; 
+    [SerializeField] private LocomotionManager locomotionManager;   
     [SerializeField] private TMPro.TMP_Dropdown movementDropdown; 
-
 
     public void OnMovementStatusChange(int value)
     {
         if(value == 0) // smooth
         {
-            autoHandPlayer.useMovement = true;
-            playerTeleport.enabled = false;
+            locomotionManager.ChangeLocomotion((LocomotionType.SmoothLocomotion) , true);
         }
         else if(value == 1) // Teleport
         {
-            autoHandPlayer.useMovement = false;
-            playerTeleport.enabled = true;
+            locomotionManager.ChangeLocomotion((LocomotionType.Teleport), true);
+
         }
     }
 }

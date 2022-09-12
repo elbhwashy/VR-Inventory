@@ -1,12 +1,12 @@
 using Autohand;
+using BNG;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine; 
 
 public class RotateManager : MonoBehaviour
 {
-    [SerializeField] private AutoHandPlayer autoHandPlayer;  
+    [SerializeField] private PlayerRotation playerRotation;  
     [SerializeField] private TMPro.TMP_Dropdown movementDropdown; 
 
 
@@ -14,12 +14,11 @@ public class RotateManager : MonoBehaviour
     {
         if(value == 0) // smooth
         {
-            autoHandPlayer.snapTurning = false;
-            
+            playerRotation.RotationType = RotationMechanic.Smooth;
         }
         else if(value == 1) // snap
         {
-            autoHandPlayer.snapTurning = true;
+            playerRotation.RotationType = RotationMechanic.Snap;
         }
     }
 }
