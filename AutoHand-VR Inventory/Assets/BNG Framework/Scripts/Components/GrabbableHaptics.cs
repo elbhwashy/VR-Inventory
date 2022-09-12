@@ -48,7 +48,7 @@ namespace BNG {
             }
         }
 
-        void doHaptics(ControllerHand touchingHand) {
+        public void doHaptics(ControllerHand touchingHand) {
             if(input) {
                 input.VibrateController(VibrateFrequency, VibrateAmplitude, VibrateDuration, touchingHand);
             }

@@ -1,3 +1,4 @@
+using BNG;
 using ObjectPoolingSystem;
 using System;
 using System.Collections;
@@ -11,9 +12,21 @@ public class Wand : MonoBehaviour
     public InputActionReference rightTriggerButton_Refrenece = null;
     [SerializeField] private ParticleSystem []auraParticals; 
     [SerializeField] private GameObject projectile; 
-    [SerializeField] private Transform firePoint; 
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private int manaConsumption = 5;
+
+    public Grabber rightGrabber;
+    public ManaBar manaBar;
+    private GrabbableHaptics grabbableHaptics;
+
     private Item item;
     private bool isTriggerClicked = false;
+    private bool haveMana = true;
+
+    private void Awake()
+    {
+        grabbableHaptics = GetComponent<GrabbableHaptics>();
+    }
 
     private void Start()
     {
@@ -40,7 +53,7 @@ public class Wand : MonoBehaviour
         timer = 0;
         foreach (var system in auraParticals)
         {
-            if (!system.isPlaying) system.Stop();
+            system.Stop();
         }
     }
 
@@ -54,7 +67,9 @@ public class Wand : MonoBehaviour
     float timer = 0;
     private void Update()
     {
-        if (isTriggerClicked)
+        if(PlayerInfo._Mana >= manaConsumption) haveMana = true;
+
+        if (isTriggerClicked && haveMana)
         {
             timer += Time.deltaTime;
 
@@ -65,17 +80,37 @@ public class Wand : MonoBehaviour
 
             if (timer >= 2.0f)
             {
-                Debug.Log("Fire Projectile  :) ");
-                timer = 0.0f;
-                SpawnProjectile();
+                if(PlayerInfo._Mana >= manaConsumption)
+                {
+                    Debug.Log("Fire Projectile  :) ");
+                    timer = 0.0f;
+                    SpawnProjectile();
+                    ConsumMana();
+                }
+                else
+                {
+                    timer = 0.0f;
+                    haveMana = false;
+                    foreach (var system in auraParticals)
+                    {
+                        system.Stop();
+                    }
+                }
             }
         }
+    }
+
+    private void ConsumMana()
+    {
+        PlayerInfo._Mana -= manaConsumption;
+
+        manaBar.UpdateManaBar();
     }
 
     private void SpawnProjectile()
     {
         GameObject projectileInstance = ObjectPooler.SharedInstance.Instantiate(projectile, firePoint.position, firePoint.rotation);
-        //projectileInstance.GetComponent<Projectile>().SetSource(this.gameObject);
+        grabbableHaptics.doHaptics(rightGrabber.HandSide);
     }
-
+    
 }
